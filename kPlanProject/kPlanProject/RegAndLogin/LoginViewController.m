@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *countryCode;
 @property (weak, nonatomic) IBOutlet UILabel *line;
 @property (weak, nonatomic) IBOutlet UITextField *folvIDText;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 
 
@@ -37,7 +38,7 @@
     [super viewDidLoad];
 
 
-    _phoneText.layer.cornerRadius = 40.0;
+    [self setCornerRadius];
     
     [self leftBarBtn:@"返回"];
     
@@ -45,6 +46,12 @@
     
     
    
+}
+
+- (void)setCornerRadius {
+    _phoneText.layer.cornerRadius = 30.0;
+    _passwordText.layer.cornerRadius = 30.0;
+    _loginBtn.layer.cornerRadius = 30.0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,8 +102,11 @@
 - (IBAction)loginClick:(id)sender {
     NSString *phoneText = _phoneText.text;
     NSDictionary *dic = [[NSDictionary alloc] init];
-    [dic setValue:phoneText forKey:@"LoginName"];
-}
+    if (phoneText.length) {
+        [dic setValue:phoneText forKey:@"LoginName"];
+
+    }
+   }
 
 - (IBAction)forgetPassWordClick:(id)sender {
 }
