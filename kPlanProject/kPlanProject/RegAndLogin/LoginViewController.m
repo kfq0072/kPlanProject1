@@ -111,10 +111,10 @@
    }
 
 - (IBAction)forgetPassWordClick:(id)sender {
+    
 }
 
 - (IBAction)loginByQQ:(id)sender {
-   
     
 }
 
