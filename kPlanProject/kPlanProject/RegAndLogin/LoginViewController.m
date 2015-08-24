@@ -41,6 +41,8 @@
     
     [self leftBarBtn:@"返回"];
     
+    _folvIDText.hidden = YES;
+    
     
    
 }
