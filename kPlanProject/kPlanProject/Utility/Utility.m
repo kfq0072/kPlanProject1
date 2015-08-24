@@ -10,6 +10,9 @@
 
 @implementation Utility
 
-
++(NSString*)getUserBaseUrl {
+    
+    return @"http://112.74.65.27/app/user/";
+}
 
 @end

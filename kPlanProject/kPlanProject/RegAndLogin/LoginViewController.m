@@ -7,11 +7,17 @@
 //
 
 #import "LoginViewController.h"
+#import "Utility.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () {
+    BOOL isUseFoLvID;
+}
 @property (weak, nonatomic) IBOutlet UITextField *phoneText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 @property (weak, nonatomic) IBOutlet UIButton *useFoLvBtn;
+@property (weak, nonatomic) IBOutlet UILabel *countryCode;
+@property (weak, nonatomic) IBOutlet UILabel *line;
+@property (weak, nonatomic) IBOutlet UITextField *folvIDText;
 
 
 
@@ -30,15 +36,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    
-//    [self useFoLvIdToLogin];
-    
-    
+
     _phoneText.layer.cornerRadius = 40.0;
     
     [self leftBarBtn:@"返回"];
     
-//    self.navigationController.navigationItem.backBarButtonItem.title = @"返回";
     
    
 }
@@ -68,26 +70,38 @@
     [self.view addConstraint:height];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)useFoLvClick:(id)sender {
+
+    
+    if (!isUseFoLvID) {
+        _folvIDText.hidden = NO;
+        _countryCode.hidden = YES;
+        _phoneText.hidden = YES;
+        _line.hidden = YES;
+        [_useFoLvBtn setTitle:@"切换手机用户登录>" forState:UIControlStateNormal];
+    }else {
+        _folvIDText.hidden = YES;
+        _countryCode.hidden = NO;
+        _phoneText.hidden = NO;
+        _line.hidden = NO;
+        [_useFoLvBtn setTitle:@"切换佛旅ID登录>" forState:UIControlStateNormal];
+    }
+    isUseFoLvID = !isUseFoLvID;
 }
 
 - (IBAction)loginClick:(id)sender {
+    NSString *phoneText = _phoneText.text;
+    NSDictionary *dic = [[NSDictionary alloc] init];
+    [dic setValue:phoneText forKey:@"LoginName"];
 }
 
 - (IBAction)forgetPassWordClick:(id)sender {
 }
 
 - (IBAction)loginByQQ:(id)sender {
+   
+    
 }
 
 - (IBAction)loginByWeChat:(id)sender {

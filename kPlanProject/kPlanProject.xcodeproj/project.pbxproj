@@ -19,6 +19,7 @@
 		7527E99C1B8961C800463B5F /* RadioGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7527E99A1B8961C800463B5F /* RadioGroup.m */; };
 		7527E9A11B896BDA00463B5F /* MasterSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7527E9A01B896BDA00463B5F /* MasterSignatureViewController.m */; };
 		752C83201B8774820073A76C /* MeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752C831F1B8774820073A76C /* MeTableViewController.m */; };
+		753EF7711B89E7280064E175 /* LoginOrRegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF7701B89E7280064E175 /* LoginOrRegViewController.m */; };
 		75657D711B8615BA0050DF2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75657D701B8615BA0050DF2E /* main.m */; };
 		75657D741B8615BA0050DF2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75657D731B8615BA0050DF2E /* AppDelegate.m */; };
 		75657D771B8615BA0050DF2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75657D761B8615BA0050DF2E /* ViewController.m */; };
@@ -30,10 +31,6 @@
 		75657D9A1B8620C50050DF2E /* Head.png in Resources */ = {isa = PBXBuildFile; fileRef = 75657D991B8620C50050DF2E /* Head.png */; };
 		75657D9D1B8622010050DF2E /* FirstPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75657D9C1B8622010050DF2E /* FirstPageTableViewCell.m */; };
 		75657DA21B8627A00050DF2E /* commentPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75657DA11B8627A00050DF2E /* commentPopView.m */; };
-		D11FD8551B8B4F5E000760D0 /* ASDemo (1).zip in Resources */ = {isa = PBXBuildFile; fileRef = D11FD8531B8B4F5E000760D0 /* ASDemo (1).zip */; };
-		D11FD8561B8B4F5E000760D0 /* DJRegister (1).zip in Resources */ = {isa = PBXBuildFile; fileRef = D11FD8541B8B4F5E000760D0 /* DJRegister (1).zip */; };
-		D11FD8581B8B4F6D000760D0 /* JxbLovelyLogin-master.zip in Resources */ = {isa = PBXBuildFile; fileRef = D11FD8571B8B4F6D000760D0 /* JxbLovelyLogin-master.zip */; };
-		D153DE071B8990AC0083A4CE /* 接口文档V1.1.doc in Resources */ = {isa = PBXBuildFile; fileRef = D153DE061B8990AC0083A4CE /* 接口文档V1.1.doc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +68,8 @@
 		7527E9A01B896BDA00463B5F /* MasterSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterSignatureViewController.m; sourceTree = "<group>"; };
 		752C831E1B8774820073A76C /* MeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewController.h; sourceTree = "<group>"; };
 		752C831F1B8774820073A76C /* MeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewController.m; sourceTree = "<group>"; };
+		753EF76F1B89E7280064E175 /* LoginOrRegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOrRegViewController.h; sourceTree = "<group>"; };
+		753EF7701B89E7280064E175 /* LoginOrRegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOrRegViewController.m; sourceTree = "<group>"; };
 		75657D6B1B8615BA0050DF2E /* kPlanProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kPlanProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75657D6F1B8615BA0050DF2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75657D701B8615BA0050DF2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,10 +90,6 @@
 		75657D9C1B8622010050DF2E /* FirstPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstPageTableViewCell.m; sourceTree = "<group>"; };
 		75657DA01B8627A00050DF2E /* commentPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commentPopView.h; sourceTree = "<group>"; };
 		75657DA11B8627A00050DF2E /* commentPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commentPopView.m; sourceTree = "<group>"; };
-		D11FD8531B8B4F5E000760D0 /* ASDemo (1).zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "ASDemo (1).zip"; sourceTree = "<group>"; };
-		D11FD8541B8B4F5E000760D0 /* DJRegister (1).zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "DJRegister (1).zip"; sourceTree = "<group>"; };
-		D11FD8571B8B4F6D000760D0 /* JxbLovelyLogin-master.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "JxbLovelyLogin-master.zip"; sourceTree = "<group>"; };
-		D153DE061B8990AC0083A4CE /* 接口文档V1.1.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "接口文档V1.1.doc"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				7527E9951B8961B700463B5F /* View */,
+				753EF76F1B89E7280064E175 /* LoginOrRegViewController.h */,
+				753EF7701B89E7280064E175 /* LoginOrRegViewController.m */,
 				75209FC61B88C1BF003A366B /* LoginViewController.h */,
 				75209FC71B88C1BF003A366B /* LoginViewController.m */,
 				7527E9891B8949EF00463B5F /* RegisterByPhoneViewController.h */,
@@ -233,7 +230,6 @@
 				75657D781B8615BA0050DF2E /* Main.storyboard */,
 				75657D7B1B8615BA0050DF2E /* Images.xcassets */,
 				75657D7D1B8615BA0050DF2E /* LaunchScreen.xib */,
-				D153DE051B8990AC0083A4CE /* 接口文档 */,
 				75657D6E1B8615BA0050DF2E /* Supporting Files */,
 			);
 			path = kPlanProject;
@@ -300,17 +296,6 @@
 				75657D961B86166B0050DF2E /* FirstPageViewController.m */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		D153DE051B8990AC0083A4CE /* 接口文档 */ = {
-			isa = PBXGroup;
-			children = (
-				D11FD8531B8B4F5E000760D0 /* ASDemo (1).zip */,
-				D11FD8541B8B4F5E000760D0 /* DJRegister (1).zip */,
-				D11FD8571B8B4F6D000760D0 /* JxbLovelyLogin-master.zip */,
-				D153DE061B8990AC0083A4CE /* 接口文档V1.1.doc */,
-			);
-			path = "接口文档";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,14 +378,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D11FD8561B8B4F5E000760D0 /* DJRegister (1).zip in Resources */,
 				75657D7A1B8615BA0050DF2E /* Main.storyboard in Resources */,
 				75657D9A1B8620C50050DF2E /* Head.png in Resources */,
-				D11FD8581B8B4F6D000760D0 /* JxbLovelyLogin-master.zip in Resources */,
 				75657D7F1B8615BA0050DF2E /* LaunchScreen.xib in Resources */,
 				75657D7C1B8615BA0050DF2E /* Images.xcassets in Resources */,
-				D11FD8551B8B4F5E000760D0 /* ASDemo (1).zip in Resources */,
-				D153DE071B8990AC0083A4CE /* 接口文档V1.1.doc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +415,7 @@
 				7527E99B1B8961C800463B5F /* RadioBox.m in Sources */,
 				75657D711B8615BA0050DF2E /* main.m in Sources */,
 				7527E9A11B896BDA00463B5F /* MasterSignatureViewController.m in Sources */,
+				753EF7711B89E7280064E175 /* LoginOrRegViewController.m in Sources */,
 				7527E99C1B8961C800463B5F /* RadioGroup.m in Sources */,
 				7527E9911B89528A00463B5F /* UseAgreementViewController.m in Sources */,
 			);
