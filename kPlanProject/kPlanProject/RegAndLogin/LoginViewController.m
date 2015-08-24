@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *line;
 @property (weak, nonatomic) IBOutlet UITextField *folvIDText;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+@property (weak, nonatomic) IBOutlet UIView *phoneTextView;
+@property (weak, nonatomic) IBOutlet UIView *passwordView;
 
 
 
@@ -49,8 +51,8 @@
 }
 
 - (void)setCornerRadius {
-    _phoneText.layer.cornerRadius = 30.0;
-    _passwordText.layer.cornerRadius = 30.0;
+    _phoneTextView.layer.cornerRadius = 30.0;
+    _passwordView.layer.cornerRadius = 30.0;
     _loginBtn.layer.cornerRadius = 30.0;
 }
 
