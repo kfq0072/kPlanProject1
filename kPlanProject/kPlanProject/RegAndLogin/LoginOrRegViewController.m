@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *tenxunIcon;
 @property (weak, nonatomic) IBOutlet UIButton *weChatIcon;
 
+- (IBAction)loginOrRegClick:(id)sender;
 
 - (IBAction)sinaClick:(id)sender;
 - (IBAction)tenxunClick:(id)sender;
@@ -48,6 +49,13 @@
 
 - (IBAction)sinaIconClick:(id)sender {
 }
+- (IBAction)loginOrRegClick:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *loginVC = [storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 - (IBAction)sinaClick:(id)sender {
 }
 

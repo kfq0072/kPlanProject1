@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
-- (void)leftBarBtn:(NSString*)title;
+- (void)leftBarBtn:(NSString*)title andIcon :(NSString*)icon;
+- (void)backBarBtn:(NSString*)title andIcon :(NSString*)icon;
 @end

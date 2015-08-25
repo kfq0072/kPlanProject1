@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "Utility.h"
+#import "WTRequestCenter.h"
+
 
 @interface LoginViewController () {
     BOOL isUseFoLvID;
@@ -42,7 +44,10 @@
 
     [self setCornerRadius];
     
-    [self leftBarBtn:@"返回"];
+    [self leftBarBtn:@"返回" andIcon:@"backicon.png"];
+    //set next page back button
+//    [self backBarBtn:@"返回" andIcon:@"backicon.png"];
+  
     
     _folvIDText.hidden = YES;
     
@@ -81,10 +86,7 @@
     [self.view addConstraint:height];
 }
 
-
 - (IBAction)useFoLvClick:(id)sender {
-
-    
     if (!isUseFoLvID) {
         _folvIDText.hidden = NO;
         _countryCode.hidden = YES;
@@ -102,25 +104,72 @@
 }
 
 - (IBAction)loginClick:(id)sender {
-    NSString *phoneText = _phoneText.text;
-    NSDictionary *dic = [[NSDictionary alloc] init];
-    if (phoneText.length) {
-        [dic setValue:phoneText forKey:@"LoginName"];
-
+    if (isUseFoLvID) {
+        [self loginPost:_folvIDText.text andPassword:_passwordText.text andLoginType:@"login"];
+    }else {
+        [self loginPost:_passwordText.text andPassword:_passwordText.text andLoginType:@"loginByID"];
     }
-   }
+   
+}
 
 - (IBAction)forgetPassWordClick:(id)sender {
-    
 }
 
 - (IBAction)loginByQQ:(id)sender {
-    
+   
 }
 
 - (IBAction)loginByWeChat:(id)sender {
 }
 
 - (IBAction)loginBySina:(id)sender {
+    
 }
+#pragma mark - post 
+-(void)loginPost:(NSString*)userName andPassword :(NSString*)password andLoginType :(NSString*)urlType{
+    [self.view endEditing:YES];
+    if (!((userName && userName.length) && ( password && password.length))) {
+        
+        [[[UIAlertView alloc] initWithTitle:PROJECTLANGUAGE(@"Tips")
+                                    message:PROJECTLANGUAGE(@"AccountPasswordNoEmpty")
+                                   delegate:nil
+                          cancelButtonTitle:PROJECTLANGUAGE(@"OK")
+                          otherButtonTitles:nil] show];
+        return;
+    }
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",UserBaseUrl,urlType]];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    
+    password = [Utility encodeBase64:password];
+    [parameters setValue:userName forKey:@"LoginName"];
+    [parameters setValue:password forKey:@"Password"];
+    
+    //"Clienttype":0,"Expires":0,"Timestamp":0,"Token":null,"V":0,
+    [parameters setValue:@"0" forKey:@"Clienttype"];
+    [parameters setValue:@"0" forKey:@"Expires"];
+    [parameters setValue:nil forKey:@"Token"];
+    [parameters setValue:@"0" forKey:@"V"];
+    
+    [WTRequestCenter postWithURL:url
+                      parameters:parameters completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                          if (!error) {
+                              NSError *jsonError = nil;
+                              id obj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
+                              if (!jsonError) {
+                                  NSLog(@"result:%@",obj);
+                                  
+                                  //TODO 跳到下一页
+                              }else
+                              {
+                                  NSLog(@"jsonError:%@",jsonError);
+                              }
+                              
+                          }else
+                          {
+                              NSLog(@"error:%@",error);
+                          }
+                      }];
+}
+
 @end

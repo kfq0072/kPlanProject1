@@ -25,17 +25,17 @@
 }
 
 #pragma mark - add left bar
-- (void)leftBarBtn:(NSString*)title {
+- (void)leftBarBtn:(NSString*)title andIcon :(NSString*)icon {
     UIButton *LeftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    LeftBtn.frame = CGRectMake(0, 0, 60, 20);
-    [LeftBtn setImage:[UIImage imageNamed:@"Head.png"] forState:UIControlStateNormal];
+    LeftBtn.frame = CGRectMake(0, 0, 100, 20);
+    [LeftBtn setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
     
     [LeftBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     
     [LeftBtn setTitle:title forState:UIControlStateNormal];
     
-    [LeftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, -5, 0, 0)];
+    [LeftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, 0)];
     
     [LeftBtn addTarget: self action:@selector(LeftBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
@@ -46,7 +46,7 @@
         UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                            initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                            target:nil action:nil];
-        negativeSpacer.width = -10;
+        negativeSpacer.width = -25;
         self.navigationItem.leftBarButtonItems = @[negativeSpacer, ButtonItem];
     }else
         self.navigationItem.leftBarButtonItem = ButtonItem;
@@ -57,14 +57,20 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)backBarBtn:(NSString*)title andIcon :(NSString*)icon {
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    backBtn.frame = CGRectMake(0, 0, 100, 50);
+    
+    [backBtn setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
+    
+    [backBtn setTitle:title forState:UIControlStateNormal];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    
+//    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] init];
+//    barButtonItem.title = @"Back";
+//    self.navigationItem.backBarButtonItem = barButtonItem;
 }
-*/
 
 @end

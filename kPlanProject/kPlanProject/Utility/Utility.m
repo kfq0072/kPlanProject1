@@ -10,9 +10,14 @@
 
 @implementation Utility
 
-+(NSString*)getUserBaseUrl {
-    
-    return @"http://112.74.65.27/app/user/";
++ (NSString*)encodeBase64:(NSString*)decodestr {
+    return [[decodestr dataUsingEncoding:NSUTF8StringEncoding]base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 }
+
++ (NSString*)decodeBase64:(NSString*)encodeStr {
+    NSData *dataFromBase64String=[[NSData alloc]initWithBase64EncodedString:encodeStr options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [[NSString alloc]initWithData:dataFromBase64String encoding:NSUTF8StringEncoding];
+}
+
 
 @end
